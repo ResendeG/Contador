@@ -1,0 +1,49 @@
+footer {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 3rem 3rem 2.5rem 3rem;
+    color: var(--cor-preto);
+    background: linear-gradient(45deg, #00dffc, #0865a3, #02ff96, #013572);
+    background-size: 300%;
+    animation: gradient 8s ease infinite;
+    }
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        } 50% {
+            background-position: 100% 0%;
+        } 100% {
+            background-position: 0% 50%;
+    }    
+}
+
+.rede-sociais {
+    display: flex;
+    justify-content: center;
+    padding-top: 0.5rem;
+    gap: 1rem;   
+}
+
+.github, .linkedin, .instagram {
+    position: relative;
+}
+
+.github, .linkedin, .instagram {
+    position: absolute;
+}
+.github:hover, .linkedin:hover, .instagram:hover {
+    opacity: 0;
+    transition: 0.9s ease;
+}
+
+@media screen and (max-height: 700px) {
+    footer {
+        position: relative;
+    }
+}

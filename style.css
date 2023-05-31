@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
+@import url('/styles/footer.css');
+
+:root {
+    --cor-preto: #000000;
+    --cor-branco: #FFFFFF;
+    --cor-shadow: #3c3d3dbe;
+    --bg-card: #f5f5f5;
+    --cor-azul: #027adb;
+    --linear: linear-gradient(20deg, rgb(160, 160, 160) 0%, rgb(228, 227, 227) 50%, rgb(126, 126, 126) 100%);
+    --bglinear: linear-gradient(0deg, rgb(48, 48, 48) 0%, rgb(255, 252, 252) 50%, rgb(189, 186, 186) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    color: var(--cor-preto);
+    background: var(--bglinear) no-repeat;
+    height: 100vh;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;    
+    padding: 1rem;
+    width: 500px;
+    margin: 2rem auto;
+    justify-content: center;
+    background: var(--bg-card);
+    border: 2px solid var(--cor-preto);
+    border-radius: 0.5rem;
+    box-shadow: 0.5rem 0.7rem 1rem 0.10rem var(--cor-shadow);
+    font-weight: 500;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    background: var(--linear);
+}
+
+.data, .sexo {
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.verificar {
+    display: flex;
+    margin-right: auto;
+    padding: 0.3rem 0.5rem 0.2rem 0.5rem;
+    border: 2px solid var(--cor-preto);
+    border-radius: 5px;
+    background: var(--cor-branco);
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1rem;
+    transition: 0.5s; 
+}
+
+.verificar:hover {
+    border: 2px solid var(--cor-azul);
+    border-radius: 5px;
+    background: var(--cor-preto);
+    color: var(--cor-branco);
+    cursor: pointer;
+}
+
+#ano {
+    width: 100px;
+    border-radius: 5px;
+    border: 1.5px solid var(--cor-preto);
+    padding: 0.25rem;
+    padding-left: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+#ano:hover, #ano:focus{
+    background: var(--cor-preto);
+    border-color: var(--cor-azul);
+    color: var(--cor-branco);
+    outline: none;
+}
+
+.resultado {
+    padding-right: 0.5rem;
+    padding-top: 1rem;
+}
+
+#nascimento {
+    padding: 0 1rem;
+}
+
+#masculino, #feminino {
+    margin: 0 0.5rem;
+}
+
+#foto {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+@media screen and (max-width: 540px) {
+    .container {
+        width: 340px;
+    }
+}
+
