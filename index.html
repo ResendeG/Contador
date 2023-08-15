@@ -9,27 +9,75 @@
 </head>
 <body>
     <header>
-        <h1 class="titulo">Verificador de Idade</h1>
+        <h2 class="titulo">JavaScript - Lógica de Programação</h2>
     </header>
     <main>
-        <div class="container">
-            <div class="data">
-                <p>Ano de Nascimento:</p>
-                <input type="number" name="ano" id="ano" min="1">
+        <section class="contador">
+            <div class="container">
+                <h2 class="subtitulo_exercicios">Contador</h2>
+                <p class="texto">Início:
+                    <input type="number" class="caixa" name="inicio" id="inicio">
+                </p>
+                <p class="texto">Fim:
+                    <input type="number" class="caixa" name="fim" id="fim">
+                </p>
+                <p class="texto">Passo:
+                    <input type="number" class="caixa" name="passo" id="passo">
+                </p>
+                <input type="button" value="Contar" class="btn-container" onclick= contar()>
+                <div id="resultado">
+                    Preparando a contagem ...
+                </div>
             </div>
-            <div class="sexo">
-                <p>Sexo:</p>
-                <input type="radio" id="masculino" name="sexo" value="Masculino" checked>
-	            <label for="masculino">Masculino</label>
-	            <input type="radio" id="feminino" name="sexo" value="Feminino">
-	            <label for="feminino">Feminino</label>
+        </section> <hr size="2" color="black">
+        <section class="tabuada">
+            <div class="container">
+                <h2 class="subtitulo_exercicios">Tabuada</h2>
+                <p class="texto_tabuada">Digite um número:
+                    <input type="number" class="caixa" name="num" id="numero">
+                </p>
+                <input type="button" value="Gerar Tabuada" class="btn-container" onclick= tabuada()>
+                <select name="tabuada" id="tabela" size="10">
+                    <option>Digite um número acima: </option>
+                </select>
             </div>
-            <input type="button" value="Verificar" class="verificar" onclick= verificar()>
-            <div class="resultado">
-                Preencha os dados acima para ver o resultado!
+        </section>
+        <section class="analisador"> <hr size="2" color="black">
+            <div class="container">
+                <h2 class="subtitulo_exercicios">Analisador <br>de Números</h2>
+                <p class="texto_tabuada">Número (entre 1 e 100):
+                    <input type="number" class="caixa" name="num" id="numeroAnalisador">
+                </p>
+                <input type="button" value="Adicionar" class="btn-container" onclick= adicionar()>
+                <select name="Analisador" id="listaAnalisador" size="10"></select>
+                <input type="button" value="Finalizar" class="btn-container" onclick= finalizar()>
+                <div id="res"></div>
             </div>
-            <img src="" id="foto" width="250px">
-        </div>
+        </section>
+        <section class="verificador"> <hr size="2" color="black">
+            <div class="container">
+                <h2 class="subtitulo_exercicios">Verificador de Idade</h2>
+                <p class="texto_verificador">Ano de Nascimento:
+                    <input type="number" class="caixa" name="ano" id="ano" min="1">
+                </p>
+                <div class="sexo">
+                    <p>Sexo:</p>
+                    <input type="radio" id="masculino" name="sexo" value="Masculino" checked>
+                    <label for="masculino">Masculino</label>
+                    <input type="radio" id="feminino" name="sexo" value="Feminino">
+                    <label for="feminino">Feminino</label>
+                </div>
+                <input type="button" value="Verificar" class="btn-container" onclick= verificar()>
+                <div class="resultado">
+                    Preencha os dados acima para ver o resultado!
+                </div>
+                <img src="" id="foto" width="250px">
+            </div>
+        </section>
+        <script src="js/verificador.js"></script>
+        <script src="js/contador.js"></script>
+        <script src="js/tabuada.js"></script>
+        <script src="js/analisador.js"></script>
     </main>
     <footer>
         <p>Desenvolvido por <b>Gabriel Resende</b></p>
@@ -45,6 +93,5 @@
                 <img src="img/instagramB.svg" width="30px" class="instagramB"></a>
         </div>
     </footer>
-    <script src="script.js"></script>
 </body>
 </html>
